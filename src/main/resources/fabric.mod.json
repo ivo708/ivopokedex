@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "ivopokedex",
+	"version": "${version}",
+	"name": "ivopokedex",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ivopokedex/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.modid.Ivopokedex"
+		],
+		"client": [
+			"name.modid.IvopokedexClient"
+		]
+	},
+	"mixins": [
+		"ivopokedex.mixins.json",
+		{
+			"config": "ivopokedex.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
